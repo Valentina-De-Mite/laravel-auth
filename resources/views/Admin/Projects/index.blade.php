@@ -2,7 +2,14 @@
 
 @section('content')
 
-<div class="container">
+<div class="container mt-5">
+    <div>
+        <h4>Add Content 
+            <button class="btn btn-primary py-1 px-3 ms-5"><a href="{{ route('admin.projects.create') }}" class="text-white"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+</svg></a></button>
+        </h4>
+    </div>
 <div class="card-body">
                         <div class="table-responsive">
                             <table
