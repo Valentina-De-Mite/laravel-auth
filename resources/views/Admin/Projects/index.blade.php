@@ -3,6 +3,13 @@
 @section('content')
 
 <div class="container mt-5">
+@if (session('message'))
+<div class="alert alert-success">
+    {{session('message')}}
+
+</div>
+
+@endif
     <div>
         <h4>Add Content 
             <button class="btn btn-primary py-1 px-3 ms-5"><a href="{{ route('admin.projects.create') }}" class="text-white"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
@@ -11,6 +18,8 @@
         </h4>
     </div>
 <div class="card-body">
+
+
                         <div class="table-responsive">
                             <table
                                 class="table table-striped

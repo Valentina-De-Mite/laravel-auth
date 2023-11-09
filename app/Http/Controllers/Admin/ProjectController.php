@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Project;
-// use App\Http\Requests\StorePostRequest;
+use App\Http\Requests\StoreProjectRequest;
 // use App\Http\Requests\UpdatePostRequest;
 use App\Http\Controllers\Controller;
 class ProjectController extends Controller
@@ -25,13 +25,21 @@ class ProjectController extends Controller
         return view('admin.projects.create');
     }
 
+
+
     /**
      * Store a newly created resource in storage.
      */
-    // public function store(StoreProjectRequest $request)
-    // {
-    //     //
-    // }
+    public function store(StoreProjectRequest $request)
+    {
+        
+        $val_data = $request->validated();
+        
+
+        Project::create($val_data);
+
+        return to_route('admin.projects.index')->with('message', 'New Project Added');
+    }
 
     /**
      * Display the specified resource.

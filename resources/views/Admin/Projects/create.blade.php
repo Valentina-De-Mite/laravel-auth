@@ -27,48 +27,25 @@
                     <input type="text" name="title" id="title" class="form-control"
                         @error('title') is-invalid @enderror placeholder="title" aria-describedby="helperTitle"
                         value="{{ old('title') }}">
-                    <small id="helperTitle" class="text-muted">type your post title max:50 characters</small>
+                    <small id="helperTitle" class="text-muted">Type your post title (max:50 characters)</small>
                 </div>
-                @error('title')
-                    <span class="text-danger">
-                        {{ message }}
-                    </span>
-                @enderror
+               
 
-                <!-- <div class="mb-3">
-                    <label for="external_link" class="form-label">external link</label>
-                    <input type="text" name="external_link" id="external_link" class="form-control"
-                        @error('external_link') is-invalid @enderror placeholder="external_link"
-                        aria-describedby="helperexternal_link" value="{{ old('external_link') }}">
-                    <small id="helperexternal_link" class="text-muted">type your project link</small>
-                </div> -->
-                <!-- @error('external_link')
-                    <span class="text-danger">
-                        {{ message }}
-                    </span>
-                @enderror -->
+               
 
                 <div class="mb-3">
                     <label for="cover_image" class="form-label">Choose file</label>
                     <input type="file" class="form-control" @error('cover_image') is-invalid @enderror name="cover_image"
                         id="cover_image" placeholder="choose a file" aria-describedby="fileHelp">
-                    <div id="fileHelp" class="form-text">add an image max 500kb</div>
+                    <div id="fileHelp" class="form-text">Add an image (max 500kb)</div>
                 </div>
-                @error('cover_image')
-                    <span class="text-danger">
-                        {{ message }}
-                    </span>
-                @enderror
+                
 
                 <div class="mb-3">
-                    <label for="content" class="form-label">content</label>
-                    <textarea class="form-control" @error('content') is-invalid @enderror name="content" id="content" rows="3"></textarea>
+                    <label for="description" class="form-label">Description</label>
+                    <textarea class="form-control" @error('description') is-invalid @enderror name="description" id="description" rows="3"></textarea>
                 </div>
-                @error('content')
-                    <span class="text-danger">
-                        {{ message }}
-                    </span>
-                @enderror
+                
 
                 <button type="submit" class="btn btn-primary">Save</button>
             </form>
