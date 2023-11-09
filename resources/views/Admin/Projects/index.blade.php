@@ -82,16 +82,17 @@
                                                                     data-bs-dismiss="modal" aria-label="Close"></button>
                                                             </div>
                                                             <div class="modal-body">
-                                                                are you sure you want to delete {{ $project->title }}?
+                                                                Are you sure you want to delete {{ $project->title }}?
                                                             </div>
                                                             <div class="modal-footer justify-content-evenly">
                                                                 <button type="button" class="btn btn-secondary"
                                                                     data-bs-dismiss="modal">Close</button>
-                                                                <form>
-                                                                
+                                                                <form action="{{route('admin.projects.destroy', $project->id)}}" method="post">
+                                                                    @csrf 
+                                                                    @method('DELETE')
                                                                   
                                                                     <button type="submit"
-                                                                        class="btn btn-danger">delete</button>
+                                                                        class="btn btn-danger">Delete</button>
                                                                 </form>
                                                             </div>
                                                         </div>
