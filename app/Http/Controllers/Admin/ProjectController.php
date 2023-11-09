@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Models\Project;
 use App\Http\Requests\StoreProjectRequest;
-// use App\Http\Requests\UpdatePostRequest;
+use App\Http\Requests\UpdateProjectRequest;
 use App\Http\Controllers\Controller;
 class ProjectController extends Controller
 {
@@ -60,10 +60,16 @@ class ProjectController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    // public function update(UpdateProjectRequest $request, Project $project)
-    // {
-    //     //
-    // }
+    public function update(UpdateProjectRequest $request, Project $project)
+    {
+        $val_data = $request->validated();
+
+       
+        $project->update($val_data);
+
+        // dd($val_data);
+        return to_route('admin.projects.index')->with('message', 'Projects updated succesfully!');
+    }
 
     /**
      * Remove the specified resource from storage.
