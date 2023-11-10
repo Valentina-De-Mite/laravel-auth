@@ -20,6 +20,8 @@ class ProjectSeeder extends Seeder
             $Project->title = $faker->realText($maxNbChars = 15, $indexSize = 2);
             $Project-> cover_image = $faker->imageUrl(640, 480, 'animals', true);
             $Project-> description = $faker->realText($maxNbChars = 150, $indexSize = 4);
+            $Project-> git_link = 'https://github.com/Valentina-De-Mite';
+            $Project-> link = $faker->url();
             $Project-> save();
 
 

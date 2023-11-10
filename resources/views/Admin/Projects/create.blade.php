@@ -42,6 +42,32 @@
                 
 
                 <div class="mb-3">
+                    <label for="git_link" class="form-label">Git Link</label>
+                    <input type="text" name="git_link" id="git_link" class="form-control"
+                        @error('git_link') is-invalid @enderror placeholder="GitLink" aria-describedby="helpergit_link"
+                        value="{{ old('git_link') }}">
+                    <small id="helpergit_link" class="text-muted">Type project git link</small>
+                </div>
+                @error('git_link')
+                    <span class="text-danger">
+                        {{ message }}
+                    </span>
+                @enderror
+
+                <div class="mb-3">
+                    <label for="link" class="form-label">External Link</label>
+                    <input type="text" name="link" id="link" class="form-control"
+                        @error('link') is-invalid @enderror placeholder="Link" aria-describedby="helper_link"
+                        value="{{ old('link') }}">
+                    <small id="helper_link" class="text-muted">Type your project link</small>
+                </div>
+                @error('git_link')
+                    <span class="text-danger">
+                        {{ message }}
+                    </span>
+                @enderror
+
+                <div class="mb-3">
                     <label for="description" class="form-label">Description</label>
                     <textarea class="form-control" @error('description') is-invalid @enderror name="description" id="description" rows="3"></textarea>
                 </div>

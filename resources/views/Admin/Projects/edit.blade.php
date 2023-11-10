@@ -69,6 +69,19 @@
                     </span>
                 @enderror
 
+
+                <div class="mb-3">
+                    <label for="link" class="form-label">External Link</label>
+                    <input type="text" name="link" id="link" class="form-control"
+                        @error('link') is-invalid @enderror placeholder="Link" aria-describedby="helper_link"
+                        value="{{ old('link') }}">
+                    <small id="helper_link" class="text-muted">Type your project link</small>
+                </div>
+                @error('git_link')
+                    <span class="text-danger">
+                        {{ message }}
+                    </span>
+                @enderror
                 <button type="submit" class="btn btn-primary">Save</button>
             </form>
         </div>

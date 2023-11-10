@@ -10,6 +10,7 @@
                         <div class="ms-3 d-flex flex-column justify-content-center">
                         <h2 class="mb-4">{{ $project->title }}</h2>
                         <p>{{ $project->description }}</p>
+                        <a class="text-white" href="{{ $project->git_link }}" >{{ $project->git_link }}</a>
 
                         </div>
                     </div>

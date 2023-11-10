@@ -16,6 +16,8 @@ return new class extends Migration
             $table->string('title');
             $table->text('cover_image');
             $table->text('description');
+            $table->text('git_link');
+            $table->text('link');
             $table->timestamps();
         });
     }

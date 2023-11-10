@@ -33,7 +33,7 @@
                                         <th class="text-center">ID</th>
                                         <th class="text-center">TITLE</th>
                                         <th class="text-center">IMAGE</th>
-                                        <th class="text-center">LINK</th>
+                                        <th class="text-center">GIT LINK</th>
                                         <th class="text-center">ACTIONS</th>
                                     </tr>
                                 </thead>
@@ -50,9 +50,8 @@
                                                 @endif
                                             </td>
                                             <td class="text-center m-auto"><a
-                                                    href="{{ $project->external_link }}">{{ $project->external_link }}</a>
+                                                    href="{{ $project->git_link }}">{{ $project->git_link }}</a>
                                             </td>
-
                                             <td class="text-center m-auto">
 
                                                 <a class="btn btn-success"
