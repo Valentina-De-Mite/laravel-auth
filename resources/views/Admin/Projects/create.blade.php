@@ -39,6 +39,25 @@
                         id="cover_image" placeholder="choose a file" aria-describedby="fileHelp">
                     <div id="fileHelp" class="form-text">Add an image (max 500kb)</div>
                 </div>
+
+
+                <div class="mb-3">
+                    <label for="category_id" class="form-label">Categories</label>
+                    <select class="form-select" name="" id="">
+                        <option selected disabled>Select a Category</option>
+                        <option value="">Uncategorized</option>
+                        
+
+
+                        @forelse ($categories as $category)
+
+                            <option value="{{$category->id}}">{{$category->name}}</option>
+
+                        @empty
+
+                        @endforelse
+                    </select>
+                </div>
                 
 
                 <div class="mb-3">
