@@ -1,1 +1,9 @@
-@import '~bootstrap/scss/bootstrap'
+@import "~bootstrap/scss/bootstrap";
+
+.bg-dark_primary {
+    background-color: rgba(29, 9, 53, 255);
+}
+
+.light {
+    color: aliceblue !important;
+}

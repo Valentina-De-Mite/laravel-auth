@@ -43,11 +43,7 @@
                                             <td class="text-center m-auto" scope="row">{{ $project->id }}</td>
                                             <td class="text-center m-auto">{{ $project->title }}</td>
                                             <td class="text-center m-auto">
-                                                @if ($project->cover_image)
-                                                    <img class="img-fluid w-25"
-                                                        
-                                                        alt="">
-                                                @endif
+                                            <img class="img-fluid w-50" src="{{ $project->cover_image }}" alt=""> 
                                             </td>
                                             <td class="text-center m-auto"><a
                                                     href="{{ $project->git_link }}">{{ $project->git_link }}</a>
